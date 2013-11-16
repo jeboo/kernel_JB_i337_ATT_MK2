@@ -46,8 +46,8 @@ make -j16
 
 echo "Copy modules to Package"
 cp -a $(find . -name *.ko -print |grep -v initramfs) $PACKAGEDIR/system/lib/modules/
-cp exfat_core.driver $PACKAGEDIR/system/lib/modules/exfat_core.ko
-cp exfat_fs.driver $PACKAGEDIR/system/lib/modules/exfat_fs.ko
+#cp exfat_core.driver $PACKAGEDIR/system/lib/modules/exfat_core.ko
+#cp exfat_fs.driver $PACKAGEDIR/system/lib/modules/exfat_fs.ko
 
 if [ -e $KERNELDIR/arch/arm/boot/zImage ]; then
 	echo "Copy zImage to Package"
